@@ -1,0 +1,14 @@
+{
+  "name": "gemstone",
+  "version": "0.0.0",
+  "description": "Product style music discovery and discussion",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Visrut Sudhakar",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.9.8"
+  }
+}
