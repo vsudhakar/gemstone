@@ -23,6 +23,7 @@ class GemsController < ApplicationController
       s.title = hash["title"]
       s.url = hash["url"]
       s.description = hash["description"]
+      s.votes = ","
       s.karma = 0
       s.save
       render inline: "okay"
