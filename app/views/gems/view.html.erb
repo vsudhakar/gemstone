@@ -85,7 +85,7 @@
           </div>
         </div>
 
-        <% Submission.where(date:@date).order(:karma).reverse_order.find_each do |gem| %>
+        <% Submission.order(:karma).where(date:@date).find_each do |gem| %>
           <% if gem.user != nil %>
             <% u = User.find(userid=gem.user) %>
             <div class="row well">
