@@ -4,7 +4,7 @@ class GemsController < ApplicationController
   end
   def view
     if params[:date] == nil
-      @date = Date.today()
+      @date = Time.now.in_time_zone('Eastern Time (US & Canada)').to_date
     else
       @date = Date.parse params[:date]
     end
@@ -18,7 +18,7 @@ class GemsController < ApplicationController
     if User.find_by(name:hash["username"]).pass == userPass
       s = Submission.create()
       s.time = s.created_at
-      s.date = Date.today()
+      s.date = Time.now.in_time_zone('Eastern Time (US & Canada)').to_date
       s.user = User.find_by(name:hash["username"]).id
       s.title = hash["title"]
       s.url = hash["url"]
@@ -44,7 +44,7 @@ class GemsController < ApplicationController
       end
     else
       @alert = "You must be logged in to upvote!"
-      @date = Date.today()
+      @date = Time.now.in_time_zone('Eastern Time (US & Canada)').to_date
       render :view
     end
   end
