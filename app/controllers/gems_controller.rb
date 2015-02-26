@@ -50,9 +50,9 @@ class GemsController < ApplicationController
     end
   end
   def downvote
-    gem = Submission.find(params[:id])
-    gem.karma -= 1
-    gem.save
-    redirect_to "/gems/"
+    # gem = Submission.find(params[:id])
+    # gem.karma -= 1
+    # gem.save
+    # redirect_to "/gems/"
   end
 end
